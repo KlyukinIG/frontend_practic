@@ -68,7 +68,61 @@
     .footer__container {
         flex-direction: column;
     }
+
+    .features {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 10px;
+        padding-left: 10px;
+    }
+
+    .features {
+        padding: 50px 10px;
+   }
+
+   .cards {
+    grid-template-columns: auto;
+   }
+
+   .features__feedback {
+    flex-direction: column;
+   }
+
+   .features__feedback-left {
+    margin-right: 0;
+   }
+
+   .features__feedback-left h2, .features__box h3 {
+    font-size: 36px;
+   }
+
+   .features__feedback-right {
+    flex-direction: column;
+    align-items: initial;
+   }
+
+   .features__savings-box {
+    margin-right: 0;
+    margin-bottom: 30px;
+   }
+
+   .promo {
+    flex-direction: column-reverse;
+   }
+
+   .promo__right {
+    padding: 50px 10px;
+   }
+
+   .promo__image {
+    width: 100%;
+    height: 500px;
+   }
+
+
  }
+
+
 
 body {
     font-family: 'Raleway', sans-serif;
@@ -283,6 +337,199 @@ footer {
 .footer__links a {
     margin-bottom: 15px;
 }
+
+.features {
+    background-color: #fff;
+    padding-top: 115px;
+    padding-bottom: 115px;
+    padding-left: 60px;
+    padding-left: 60px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+
+}
+
+.card {
+    padding-top: 35px;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-bottom: 25px;
+    border: 1px solid #D9E4E6;
+    border-radius: 5px;
+    background: #FFFFFF;
+}
+
+.card p {
+    font-size: 16px;
+    line-height: 22px;
+    opacity: 0.8;
+}
+
+.card__logo {
+    width: 100px;
+    height: 100px;
+    font-size: 32px;
+    font-weight: 700;
+    background-color: #eaeff9;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.c1 {
+    color: #ffb406;
+}
+
+.c2 {
+    color: #ad1714;
+}
+
+.c3 {
+    color: #22a030;
+}
+
+.features__border {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border:  #E6EAF4 solid 1px;
+}
+
+.features__feedback {
+    display: flex;
+}
+
+.features__feedback-left {
+    margin-right: 10px;
+}
+
+.features__feedback-left h2{
+    font-size: 48px;
+}
+
+.features__feedback-left p{
+    font-size: 18px;
+    line-height: 26px;
+    opacity: 0.7;
+}
+
+.features__feedback-right {
+    display: flex;
+    align-items: center;
+}
+
+.features__box {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 30px;
+    padding-bottom: 25px;
+    color: #fff;
+    border-radius: 25px;
+}
+
+.features__box h3 {
+    font-size: 48px;
+    margin-top: 0px;
+    margin-bottom: 20px; 
+}
+
+.features__savings-box {
+    background-color: #dc5e26;
+    margin-right: 30px;
+    box-shadow: 0 6px 0 rgb(221 95 38 / 20%);
+}
+
+.features__savings-box p {
+    margin-bottom: 50px;
+}
+
+.features__rate-box {
+    background-color: #1D263A;
+    box-shadow: 0 6px 0 rgb(221 95 38 / 20%);
+}
+
+.stars {
+    color: #ff7039;
+}
+
+.promo {
+    display: flex;
+}
+
+.promo__image {
+    background-image: url(img/promo.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    flex-shrink: 0;
+}
+
+.promo__right {
+    background-color: #dd5f26;
+    padding-top: 160px;
+    padding-bottom: 160px;
+    padding-left: 60px;
+    padding-right: 60px;
+    width: 100%;
+
+}
+
+.right_card {
+    background-color: #fff;
+    border-radius: 25px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight : 500;
+}
+
+.right_card p {
+    opacity: 0.8;
+
+}
+
+.button_right_card {
+    display: flex;
+    justify-content: center;
+}
+
+.right_card  button {
+    background-color: #107b1c;
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: 600;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-shadow: 0 16px 36px rgb(16 122 28 / 30%);
+}
+
+.right_card p::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+   height: 10px;
+   border-radius: 50%;
+   background-color: #ec6b29;
+   margin-right: 10px;
+}
+
+.right_card i {
+    font-size: 15px;
+    margin-left: 5px;
+}
+
+
+
 
 @keyframes spin {
     0% {
