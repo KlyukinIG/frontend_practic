@@ -444,10 +444,6 @@ footer {
     box-shadow: 0 6px 0 rgb(221 95 38 / 20%);
 }
 
-.features__savings-box p {
-    margin-bottom: 50px;
-}
-
 .features__rate-box {
     background-color: #1D263A;
     box-shadow: 0 6px 0 rgb(221 95 38 / 20%);
@@ -527,8 +523,6 @@ footer {
     font-size: 15px;
     margin-left: 5px;
 }
-
-
 
 
 @keyframes spin {
