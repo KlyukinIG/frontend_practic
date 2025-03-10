@@ -1,7 +1,22 @@
-const count = document.getElementById('count')
+//функция счетчик
+function counterUsers() {
+    let count = document.getElementById('count')
+    let index = 0; // Начинаем с 0
+    const interval = setInterval(() => {
+        if (index <= 5000) {
+            count.textContent = index; // Обновляем значение 
+            index += 100; // Увеличиваем значение
+        } else {
+            count.textContent = index + '+'
+            clearInterval(interval); // Останавливаем интервал, когда достигли 5000
+            setTimeout(counterUsers, 100); // Перезапускаем функцию
+        }
+    }, 100); 
+}
 
-let countValue = Number(count.textContent); // Получаем текущее значение и преобразуем в число
+counterUsers(); 
 
+//input со своим значением
 document.querySelector('#budget').addEventListener('change', function handleSelectChange(event) {
     if (event.target.value === 'other') {
         const newDiv = document.createElement('div')
@@ -21,20 +36,17 @@ document.querySelector('#budget').addEventListener('change', function handleSele
     }
 })
 
-
-function counterUsers() {
-    let index = 0; // Начинаем с 0
-    const interval = setInterval(() => {
-        if (index <= 5000) {
-            count.textContent = index; // Обновляем значение в DOM
-            index += 100; // Увеличиваем значение на 100
-        } else {
-            count.textContent = index + '+'
-            clearInterval(interval); // Останавливаем интервал, когда достигли 5000
-            setTimeout(counterUsers, 100); // Перезапускаем функцию через 50 мс
-        }
-    }, 100); // Задержка 50 мс между изменениями
+//плавный скрол
+function smoothScroll(element) {
+    element.addEventListener('click', function (e) {
+        e.preventDefault()
+        document.querySelector(e.target.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'})
+    }) 
 }
 
-counterUsers(); // Запускаем функцию
+    
+document.querySelectorAll('a[href^="#"]').forEach(element => {
+    smoothScroll(element)
+})    
 
